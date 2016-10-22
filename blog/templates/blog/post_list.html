@@ -4,16 +4,21 @@
 
     <title>Professional Foot Care Blog</title>
   </head>
-  <h1><strong><a href=""> Foot Care Nursing Blog</a></strong></h1>
-  <h2>A Networking Site for Foot Care Nurses in Colorado</h2>
 
   <body>
-      <div class="">
-        <p>
-          Please post to the <a href="">Introduction</a> post to introduce yourself!
-        </p>
+    <div>
 
+
+      <h1>Foot Care Nursing Blog</h1>
+    </div>
+  {% for post in posts %}
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
       </div>
+  {% endfor %}
+
 
 
   </body>
